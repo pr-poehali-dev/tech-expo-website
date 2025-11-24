@@ -7,12 +7,12 @@ const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
 
   const navItems = [
-    { id: 'home', label: 'Главная', icon: 'Home' },
-    { id: 'tickets', label: 'Билеты', icon: 'Ticket' },
-    { id: 'news', label: 'Новости', icon: 'Newspaper' },
-    { id: 'participants', label: 'Участники', icon: 'Users' },
-    { id: 'partners', label: 'Партнеры', icon: 'Handshake' },
-    { id: 'contacts', label: 'Контакты', icon: 'Mail' }
+    { id: 'home', label: 'Home', icon: 'Home' },
+    { id: 'tickets', label: 'Tickets', icon: 'Ticket' },
+    { id: 'news', label: 'News', icon: 'Newspaper' },
+    { id: 'participants', label: 'Participants', icon: 'Users' },
+    { id: 'partners', label: 'Partners', icon: 'Handshake' },
+    { id: 'contacts', label: 'Contact', icon: 'Mail' }
   ];
 
   const infoCards = [
@@ -49,15 +49,15 @@ const Index = () => {
           Tech Innovation Expo
         </h1>
         <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-          Премьер-событие для передовых технологий 2025
+          The Premier Event for Cutting-Edge Technology 2025
         </p>
         <div className="flex gap-4 justify-center pt-4">
           <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity text-lg px-8" onClick={() => setActiveSection('tickets')}>
-            Купить билет
+            Get Tickets
             <Icon name="ArrowRight" className="ml-2" size={20} />
           </Button>
           <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 text-lg px-8">
-            Узнать больше
+            Learn More
             <Icon name="Info" className="ml-2" size={20} />
           </Button>
         </div>
@@ -86,9 +86,9 @@ const Index = () => {
       </div>
 
       <div className="bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 rounded-3xl p-12 text-center space-y-6 border-2 border-primary/20 animate-fade-in" style={{ animationDelay: '0.8s', animationFillMode: 'backwards' }}>
-        <h2 className="text-4xl font-bold">10,000+ участников | 300+ стендов | 50+ стран</h2>
+        <h2 className="text-4xl font-bold">10,000+ Attendees | 300+ Stands | 50+ Countries</h2>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Станьте частью крупнейшего технологического события года
+          Be Part of the Biggest Tech Event of the Year
         </p>
       </div>
     </div>
@@ -97,14 +97,14 @@ const Index = () => {
   const renderTickets = () => (
     <div className="space-y-8 animate-fade-in">
       <div className="text-center space-y-4">
-        <h2 className="text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Билеты</h2>
-        <p className="text-xl text-muted-foreground">Выберите подходящий вариант посещения</p>
+        <h2 className="text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Tickets</h2>
+        <p className="text-xl text-muted-foreground">Choose Your Pass</p>
       </div>
       <div className="grid md:grid-cols-3 gap-6">
         {[
-          { name: 'Стандартный', price: '50€', features: ['Доступ к выставке', 'Цифровой гид', 'Бесплатный shuttle'] },
-          { name: 'VIP', price: '150€', features: ['Все из стандарта', 'VIP-зона', 'Встреча со спикерами', 'Кофе-брейки'] },
-          { name: 'Участник', price: '300€', features: ['Все из VIP', 'Собственный стенд', 'Маркетинговые материалы', 'Приоритетная поддержка'] }
+          { name: 'Standard', price: '50€', features: ['Exhibition access', 'Digital guide', 'Free shuttle service'] },
+          { name: 'VIP', price: '150€', features: ['All standard features', 'VIP lounge access', 'Meet the speakers', 'Coffee breaks included'] },
+          { name: 'Exhibitor', price: '300€', features: ['All VIP features', 'Own exhibition stand', 'Marketing materials', 'Priority support'] }
         ].map((ticket, i) => (
           <Card key={i} className="p-8 space-y-6 hover:scale-105 transition-transform border-2 border-primary/20 hover:border-primary/50">
             <div>
@@ -119,7 +119,7 @@ const Index = () => {
                 </li>
               ))}
             </ul>
-            <Button className="w-full bg-gradient-to-r from-primary to-secondary">Купить</Button>
+            <Button className="w-full bg-gradient-to-r from-primary to-secondary">Buy Now</Button>
           </Card>
         ))}
       </div>
@@ -128,13 +128,13 @@ const Index = () => {
 
   const renderNews = () => (
     <div className="space-y-8 animate-fade-in">
-      <h2 className="text-5xl font-bold text-center bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Новости</h2>
+      <h2 className="text-5xl font-bold text-center bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">News</h2>
       <div className="grid md:grid-cols-2 gap-6">
         {[
-          { title: 'Открыта регистрация участников', date: '15 марта 2025', icon: 'Megaphone' },
-          { title: 'Объявлены спикеры конференции', date: '10 марта 2025', icon: 'Mic' },
-          { title: 'Новые технологии AI на выставке', date: '5 марта 2025', icon: 'Brain' },
-          { title: 'Партнерство с ведущими компаниями', date: '1 марта 2025', icon: 'Handshake' }
+          { title: 'Registration Now Open', date: 'March 15, 2025', icon: 'Megaphone' },
+          { title: 'Conference Speakers Announced', date: 'March 10, 2025', icon: 'Mic' },
+          { title: 'New AI Technologies at Expo', date: 'March 5, 2025', icon: 'Brain' },
+          { title: 'Partnership with Leading Companies', date: 'March 1, 2025', icon: 'Handshake' }
         ].map((news, i) => (
           <Card key={i} className="p-6 hover:scale-105 transition-transform border-2 border-secondary/20 hover:border-secondary/50 group">
             <div className="flex gap-4">
@@ -154,7 +154,7 @@ const Index = () => {
 
   const renderParticipants = () => (
     <div className="space-y-8 animate-fade-in">
-      <h2 className="text-5xl font-bold text-center bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">Участники</h2>
+      <h2 className="text-5xl font-bold text-center bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">Participants</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {['TechCorp', 'InnovateLab', 'RoboSystems', 'AI Solutions', 'Future Tech', 'SmartDevices', 'CloudNine', 'DataHub'].map((company, i) => (
           <Card key={i} className="aspect-square flex items-center justify-center p-8 hover:scale-105 transition-transform border-2 border-accent/20 hover:border-accent/50 group">
@@ -172,12 +172,12 @@ const Index = () => {
 
   const renderPartners = () => (
     <div className="space-y-8 animate-fade-in">
-      <h2 className="text-5xl font-bold text-center bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Партнеры</h2>
+      <h2 className="text-5xl font-bold text-center bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Partners</h2>
       <div className="grid md:grid-cols-3 gap-6">
         {[
-          { name: 'Global Tech Foundation', type: 'Генеральный партнер', icon: 'Award' },
-          { name: 'Innovation Fund', type: 'Официальный партнер', icon: 'TrendingUp' },
-          { name: 'Tech Media Group', type: 'Медиа-партнер', icon: 'Radio' }
+          { name: 'Global Tech Foundation', type: 'General Partner', icon: 'Award' },
+          { name: 'Innovation Fund', type: 'Official Partner', icon: 'TrendingUp' },
+          { name: 'Tech Media Group', type: 'Media Partner', icon: 'Radio' }
         ].map((partner, i) => (
           <Card key={i} className="p-8 text-center space-y-4 hover:scale-105 transition-transform border-2 border-primary/20 hover:border-primary/50 group">
             <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-accent mx-auto flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -195,13 +195,13 @@ const Index = () => {
 
   const renderContacts = () => (
     <div className="max-w-2xl mx-auto space-y-8 animate-fade-in">
-      <h2 className="text-5xl font-bold text-center bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Контакты</h2>
+      <h2 className="text-5xl font-bold text-center bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Contact</h2>
       <Card className="p-8 space-y-6 border-2 border-primary/20">
         {[
-          { icon: 'MapPin', label: 'Адрес', value: 'Innovation Center, Berlin, Germany' },
-          { icon: 'Phone', label: 'Телефон', value: '+49 30 1234 5678' },
+          { icon: 'MapPin', label: 'Address', value: 'Innovation Center, Berlin, Germany' },
+          { icon: 'Phone', label: 'Phone', value: '+49 30 1234 5678' },
           { icon: 'Mail', label: 'Email', value: 'info@techinnoexpo.com' },
-          { icon: 'Clock', label: 'Время работы', value: 'Пн-Пт 9:00-18:00' }
+          { icon: 'Clock', label: 'Working Hours', value: 'Mon-Fri 9:00-18:00' }
         ].map((contact, i) => (
           <div key={i} className="flex items-start gap-4 group">
             <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
